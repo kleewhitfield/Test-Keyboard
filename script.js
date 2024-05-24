@@ -42,6 +42,7 @@ keys.forEach(key => {
   key.addEventListener('click', function() {
     const keyAttribute = this.getAttribute('data-key');
     playSound(keyAttribute);
+    setTimeout(() => stopSound(keyAttribute), 200); // Automatically stop sound after a short delay
   });
 
   key.addEventListener('touchstart', function(e) {
